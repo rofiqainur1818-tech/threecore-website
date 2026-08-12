@@ -396,4 +396,25 @@ h4 { font-size: clamp(1.2rem, 2vw, 1.8rem); }
   .btn-group { flex-direction: column; }
   .btn { width: 100%; }
   .espresso-grid { grid-template-columns: 1fr; }
+  
+  /* ===== PERBAIKAN HERO MOBILE ===== */
+  .hero {
+    padding-top: 120px;
+    padding-bottom: 120px;
+    min-height: 100vh;
+  }
+  .hero-headline {
+    font-size: clamp(2rem, 10vw, 3.5rem);
+  }
+  .hero-subline {
+    font-size: 0.95rem;
+    margin-bottom: var(--space-md);
+  }
+  .hero-formula {
+    font-size: 0.7rem;
+    bottom: var(--space-md);
+    padding: 0 var(--space-md);
+    text-align: center;
+    width: 90%;
+  }
 }
