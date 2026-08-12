@@ -180,6 +180,7 @@ h4 { font-size: clamp(1.2rem, 2vw, 1.8rem); }
 
 /* Split Section */
 .split-section { padding: var(--space-3xl) 0; background: var(--tcr-black); }
+.split-section .section-header { padding-top: var(--space-xl); }
 .split-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border-top: 1px solid var(--tcr-charcoal); border-bottom: 1px solid var(--tcr-charcoal); }
 .split-item { padding: var(--space-3xl) var(--space-lg); position: relative; overflow: hidden; }
 .split-item:first-child { border-right: 1px solid var(--tcr-charcoal); }
