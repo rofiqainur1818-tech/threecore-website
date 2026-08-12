@@ -136,7 +136,7 @@ h4 { font-size: clamp(1.2rem, 2vw, 1.8rem); }
 .btn-secondary:hover { background: var(--tcr-cream); color: var(--tcr-black); }
 .btn-ghost { background: transparent; color: var(--tcr-cream); padding: 0.75rem 0; border-bottom: 2px solid var(--tcr-copper); }
 .btn-ghost:hover { color: var(--tcr-copper); }
-.btn-group { display: flex; gap: var(--space-sm); flex-wrap: wrap; }
+.btn-group { display: flex; gap: var(--space-sm); flex-wrap: wrap; justify-content: center; }
 
 /* Hero */
 .hero {
