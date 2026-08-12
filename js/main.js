@@ -166,3 +166,36 @@ document.addEventListener('DOMContentLoaded', function() {
 
   console.log('THREECORE website initialized.');
 });
+
+// ============================================
+// BLUEPRINT PARALLAX EFFECT
+// ============================================
+
+(function() {
+  const layers = document.querySelectorAll('.blueprint-layer');
+  
+  if (layers.length === 0) return;
+  
+  let ticking = false;
+  
+  function updateParallax() {
+    const scrolled = window.pageYOffset;
+    
+    layers.forEach(layer => {
+      const speed = parseFloat(layer.getAttribute('data-speed')) || 0.3;
+      const yPos = -(scrolled * speed);
+      layer.style.transform = `translate3d(0, ${yPos}px, 0)`;
+    });
+    
+    ticking = false;
+  }
+  
+  function requestTick() {
+    if (!ticking) {
+      requestAnimationFrame(updateParallax);
+      ticking = true;
+    }
+  }
+  
+  window.addEventListener('scroll', requestTick, { passive: true });
+})();
