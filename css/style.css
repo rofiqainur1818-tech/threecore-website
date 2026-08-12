@@ -383,6 +383,153 @@ h4 { font-size: clamp(1.2rem, 2vw, 1.8rem); }
 ::-webkit-scrollbar-thumb { background: var(--tcr-charcoal); }
 ::-webkit-scrollbar-thumb:hover { background: var(--tcr-copper); }
 
+/* ============================================
+   BLUEPRINT PARALLAX SYSTEM
+   ============================================ */
+
+.blueprint-layer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  color: var(--tcr-copper);
+  z-index: 1;
+  transition: transform 0.1s linear;
+  will-change: transform;
+}
+
+/* LAYER 1 - GRID */
+.blueprint-grid {
+  position: absolute;
+  inset: -20%;
+  background-image: 
+    linear-gradient(rgba(193, 95, 43, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(193, 95, 43, 0.08) 1px, transparent 1px);
+  background-size: 50px 50px;
+  opacity: 0.6;
+}
+
+/* LAYER 2 - CIRCLE & CURVE */
+.blueprint-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90vh;
+  height: 90vh;
+  max-width: 900px;
+  max-height: 900px;
+  opacity: 0.5;
+}
+
+.blueprint-curve {
+  position: absolute;
+  bottom: 15%;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  opacity: 0.6;
+}
+
+/* LAYER 3 - CROSSHAIR & LABELS */
+.blueprint-crosshair {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+}
+
+.blueprint-crosshair-1 {
+  top: 20%;
+  left: 8%;
+}
+
+.blueprint-crosshair-2 {
+  bottom: 25%;
+  right: 10%;
+}
+
+.crosshair-line {
+  position: absolute;
+  background: var(--tcr-copper);
+  opacity: 0.5;
+}
+
+.crosshair-h {
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+}
+
+.crosshair-v {
+  top: 0;
+  left: 50%;
+  width: 1px;
+  height: 100%;
+}
+
+.crosshair-dot {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 6px;
+  height: 6px;
+  border: 1px solid var(--tcr-copper);
+  border-radius: 50%;
+  opacity: 0.7;
+}
+
+.blueprint-label {
+  position: absolute;
+  font-family: var(--font-body);
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  color: var(--tcr-copper);
+  opacity: 0.4;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.blueprint-label-1 {
+  top: 15%;
+  right: 12%;
+}
+
+.blueprint-label-2 {
+  bottom: 30%;
+  left: 6%;
+}
+
+.blueprint-label-3 {
+  top: 60%;
+  right: 8%;
+}
+
+/* Pastikan konten hero di atas layer */
+.hero-content {
+  position: relative;
+  z-index: 10;
+}
+
+.hero-formula {
+  z-index: 10;
+}
+
+/* Responsive - Sembunyikan beberapa element di mobile */
+@media (max-width: 768px) {
+  .blueprint-label {
+    font-size: 0.55rem;
+  }
+  .blueprint-crosshair {
+    width: 30px;
+    height: 30px;
+  }
+  .blueprint-grid {
+    background-size: 30px 30px;
+  }
+}
+
 /* Responsive */
 @media (max-width: 1024px) {
   .grid-2, .split-grid, .origin-grid, .why-grid, .story-grid, .product-detail-grid { grid-template-columns: 1fr; }
