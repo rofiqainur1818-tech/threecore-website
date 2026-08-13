@@ -383,153 +383,6 @@ h4 { font-size: clamp(1.2rem, 2vw, 1.8rem); }
 ::-webkit-scrollbar-thumb { background: var(--tcr-charcoal); }
 ::-webkit-scrollbar-thumb:hover { background: var(--tcr-copper); }
 
-/* ============================================
-   BLUEPRINT PARALLAX SYSTEM
-   ============================================ */
-
-.blueprint-layer {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  overflow: hidden;
-  color: var(--tcr-copper);
-  z-index: 1;
-  transition: transform 0.1s linear;
-  will-change: transform;
-}
-
-/* LAYER 1 - GRID */
-.blueprint-grid {
-  position: absolute;
-  inset: -20%;
-  background-image: 
-    linear-gradient(rgba(193, 95, 43, 0.08) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(193, 95, 43, 0.08) 1px, transparent 1px);
-  background-size: 50px 50px;
-  opacity: 0.6;
-}
-
-/* LAYER 2 - CIRCLE & CURVE */
-.blueprint-circle {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 90vh;
-  height: 90vh;
-  max-width: 900px;
-  max-height: 900px;
-  opacity: 0.5;
-}
-
-.blueprint-curve {
-  position: absolute;
-  bottom: 15%;
-  left: 0;
-  width: 100%;
-  height: 200px;
-  opacity: 0.6;
-}
-
-/* LAYER 3 - CROSSHAIR & LABELS */
-.blueprint-crosshair {
-  position: absolute;
-  width: 40px;
-  height: 40px;
-}
-
-.blueprint-crosshair-1 {
-  top: 20%;
-  left: 8%;
-}
-
-.blueprint-crosshair-2 {
-  bottom: 25%;
-  right: 10%;
-}
-
-.crosshair-line {
-  position: absolute;
-  background: var(--tcr-copper);
-  opacity: 0.5;
-}
-
-.crosshair-h {
-  top: 50%;
-  left: 0;
-  width: 100%;
-  height: 1px;
-}
-
-.crosshair-v {
-  top: 0;
-  left: 50%;
-  width: 1px;
-  height: 100%;
-}
-
-.crosshair-dot {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 6px;
-  height: 6px;
-  border: 1px solid var(--tcr-copper);
-  border-radius: 50%;
-  opacity: 0.7;
-}
-
-.blueprint-label {
-  position: absolute;
-  font-family: var(--font-body);
-  font-size: 0.65rem;
-  letter-spacing: 0.2em;
-  color: var(--tcr-copper);
-  opacity: 0.4;
-  text-transform: uppercase;
-  font-weight: 500;
-}
-
-.blueprint-label-1 {
-  top: 15%;
-  right: 12%;
-}
-
-.blueprint-label-2 {
-  bottom: 30%;
-  left: 6%;
-}
-
-.blueprint-label-3 {
-  top: 60%;
-  right: 8%;
-}
-
-/* Pastikan konten hero di atas layer */
-.hero-content {
-  position: relative;
-  z-index: 10;
-}
-
-.hero-formula {
-  z-index: 10;
-}
-
-/* Responsive - Sembunyikan beberapa element di mobile */
-@media (max-width: 768px) {
-  .blueprint-label {
-    font-size: 0.55rem;
-  }
-  .blueprint-crosshair {
-    width: 30px;
-    height: 30px;
-  }
-  .blueprint-grid {
-    background-size: 30px 30px;
-  }
-}
-
 /* Responsive */
 @media (max-width: 1024px) {
   .grid-2, .split-grid, .origin-grid, .why-grid, .story-grid, .product-detail-grid { grid-template-columns: 1fr; }
@@ -571,5 +424,370 @@ h4 { font-size: clamp(1.2rem, 2vw, 1.8rem); }
     padding: 0 var(--space-md);
     text-align: center;
     width: 90%;
+  }
+}
+
+/* ============================================
+   CINEMA BLUEPRINT BACKGROUND (GLOBAL FIXED)
+   ============================================ */
+
+.cinema-bg {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+  color: var(--tcr-copper);
+  background: var(--tcr-black);
+}
+
+/* Grid Layer */
+.cinema-grid {
+  position: absolute;
+  inset: -10%;
+  background-image: 
+    linear-gradient(rgba(193, 95, 43, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(193, 95, 43, 0.06) 1px, transparent 1px);
+  background-size: 60px 60px;
+  opacity: 0.7;
+  animation: gridPulse 8s ease-in-out infinite;
+}
+
+@keyframes gridPulse {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 0.8; }
+}
+
+/* Circle System */
+.cinema-circle-wrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90vh;
+  height: 90vh;
+  max-width: 900px;
+  max-height: 900px;
+  transition: all 1.5s var(--ease-power);
+}
+
+.cinema-circle {
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  animation: circleRotate 60s linear infinite;
+  transition: all 1.5s var(--ease-power);
+}
+
+@keyframes circleRotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Roasting Curve */
+.cinema-curve-wrap {
+  position: absolute;
+  bottom: 15%;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  opacity: 0;
+  transition: opacity 1.5s var(--ease-power), transform 1.5s var(--ease-power);
+  transform: translateY(20px);
+}
+
+.cinema-curve {
+  width: 100%;
+  height: 100%;
+}
+
+/* Big Number */
+.cinema-number {
+  position: absolute;
+  top: 50%;
+  left: 8%;
+  transform: translateY(-50%);
+  font-family: var(--font-display);
+  font-size: 25vw;
+  line-height: 0.8;
+  color: var(--tcr-copper);
+  opacity: 0;
+  transition: opacity 1.5s var(--ease-power), transform 1.5s var(--ease-power);
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Big Formula */
+.cinema-formula {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 10vw, 10rem);
+  color: var(--tcr-copper);
+  opacity: 0;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+  transition: opacity 1.5s var(--ease-power), transform 1.5s var(--ease-power);
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Crosshairs */
+.cinema-crosshair {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  transition: all 1.5s var(--ease-power);
+}
+
+.cinema-crosshair-1 { top: 15%; left: 8%; }
+.cinema-crosshair-2 { bottom: 20%; right: 10%; }
+.cinema-crosshair-3 { top: 60%; right: 15%; opacity: 0; }
+
+/* Reuse crosshair styles */
+.cinema-crosshair .crosshair-line {
+  position: absolute;
+  background: var(--tcr-copper);
+  opacity: 0.5;
+}
+.cinema-crosshair .crosshair-h { top: 50%; left: 0; width: 100%; height: 1px; }
+.cinema-crosshair .crosshair-v { top: 0; left: 50%; width: 1px; height: 100%; }
+.cinema-crosshair .crosshair-dot {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 6px;
+  height: 6px;
+  border: 1px solid var(--tcr-copper);
+  border-radius: 50%;
+  opacity: 0.7;
+}
+
+/* Technical Labels */
+.cinema-label {
+  position: absolute;
+  font-family: var(--font-body);
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  color: var(--tcr-copper);
+  opacity: 0.4;
+  text-transform: uppercase;
+  font-weight: 500;
+  transition: all 0.8s var(--ease-power);
+}
+
+.cinema-label-tl { top: 12%; left: 5%; }
+.cinema-label-tr { top: 12%; right: 5%; }
+.cinema-label-bl { bottom: 15%; left: 5%; }
+.cinema-label-br { bottom: 15%; right: 5%; }
+
+/* Section Indicator (bottom center) */
+.cinema-indicator {
+  position: absolute;
+  bottom: 3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  opacity: 0.6;
+}
+
+.cinema-indicator-text {
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  letter-spacing: 0.3em;
+  color: var(--tcr-copper);
+  text-transform: uppercase;
+  transition: all 0.6s var(--ease-power);
+}
+
+.cinema-indicator-line {
+  width: 1px;
+  height: 40px;
+  background: linear-gradient(to bottom, var(--tcr-copper), transparent);
+}
+
+/* ============================================
+   SECTION-BASED VARIATIONS
+   ============================================ */
+
+/* Section 01 - HERO (CORE) */
+body[data-active="01"] .cinema-circle-wrap {
+  transform: translate(-50%, -50%) scale(1);
+}
+body[data-active="01"] .cinema-curve-wrap {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Section 02 - PHILOSOPHY */
+body[data-active="02"] .cinema-circle-wrap {
+  transform: translate(-50%, -50%) scale(0.6);
+  opacity: 0.6;
+}
+body[data-active="02"] .cinema-formula {
+  opacity: 0.08;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* Section 03 - AUDIENCE (SPLIT) */
+body[data-active="03"] .cinema-circle-wrap {
+  transform: translate(-50%, -50%) scale(0.8);
+}
+body[data-active="03"] .cinema-circle {
+  opacity: 0.3;
+}
+
+/* Section 04 - ESPRESSO */
+body[data-active="04"] .cinema-circle-wrap {
+  transform: translate(-50%, -50%) scale(0.4);
+  opacity: 0.4;
+}
+body[data-active="04"] .cinema-number {
+  opacity: 0.06;
+  transform: translateY(-50%) translateX(0);
+}
+
+/* Section 05 - FINDER */
+body[data-active="05"] .cinema-circle-wrap {
+  transform: translate(-50%, -50%) scale(0.7);
+}
+body[data-active="05"] .cinema-grid {
+  opacity: 0.9;
+}
+
+/* Section 06 - ORIGIN */
+body[data-active="06"] .cinema-circle-wrap {
+  transform: translate(-50%, -50%) scale(1.1);
+  opacity: 0.4;
+}
+body[data-active="06"] .cinema-crosshair-3 {
+  opacity: 1;
+}
+
+/* Section 07 - BUSINESS */
+body[data-active="07"] .cinema-circle-wrap {
+  transform: translate(-50%, -50%) scale(0.5);
+}
+body[data-active="07"] .cinema-curve-wrap {
+  opacity: 0.8;
+  transform: translateY(-50px);
+}
+
+/* Section 08 - CUSTOM BLEND */
+body[data-active="08"] .cinema-circle-wrap {
+  transform: translate(-50%, -50%) scale(0.9) rotate(45deg);
+}
+
+/* Section 09 - WHY */
+body[data-active="09"] .cinema-circle-wrap {
+  transform: translate(-50%, -50%) scale(0.7);
+  opacity: 0.5;
+}
+
+/* Section 10 - JOURNAL */
+body[data-active="10"] .cinema-circle-wrap {
+  transform: translate(-50%, -50%) scale(0.6);
+}
+body[data-active="10"] .cinema-grid {
+  opacity: 0.5;
+}
+
+/* Section 11 - CONTACT (Convergent) */
+body[data-active="11"] .cinema-circle-wrap {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 0.7;
+}
+body[data-active="11"] .cinema-curve-wrap {
+  opacity: 0.5;
+  transform: translateY(0);
+}
+
+/* ============================================
+   Z-INDEX FIX - Content di atas background
+   ============================================ */
+
+.nav {
+  z-index: 1000;
+}
+
+.mobile-menu {
+  z-index: 999;
+}
+
+section {
+  position: relative;
+  z-index: 2;
+}
+
+/* Section backgrounds transparant supaya cinema-bg terlihat */
+.hero,
+.philosophy,
+.split-section,
+.espresso-section,
+.finder-section,
+.origin-section,
+.business-hero,
+.customblend-section,
+.why-section,
+.journal-section,
+.contact-section {
+  background: transparent !important;
+}
+
+/* Tambah overlay tipis untuk keterbacaan text */
+.hero::before,
+.philosophy::before,
+.split-section::before,
+.espresso-section::before,
+.finder-section::before,
+.origin-section::before,
+.business-hero::before,
+.customblend-section::before,
+.why-section::before,
+.journal-section::before,
+.contact-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(14, 14, 14, 0.65);
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* ============================================
+   MOBILE RESPONSIVE
+   ============================================ */
+
+@media (max-width: 768px) {
+  .cinema-circle-wrap {
+    width: 100vw;
+    height: 100vw;
+  }
+  .cinema-label {
+    font-size: 0.55rem;
+  }
+  .cinema-crosshair {
+    width: 30px;
+    height: 30px;
+  }
+  .cinema-grid {
+    background-size: 40px 40px;
+  }
+  .cinema-indicator {
+    bottom: 2rem;
+  }
+  .cinema-formula {
+    font-size: clamp(2rem, 12vw, 5rem);
+  }
+  .cinema-number {
+    font-size: 40vw;
   }
 }
