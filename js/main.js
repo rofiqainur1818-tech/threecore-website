@@ -167,13 +167,6 @@ document.addEventListener('DOMContentLoaded', function() {
   console.log('THREECORE website initialized.');
 });
 
-// ============================================
-// BLUEPRINT PARALLAX EFFECT
-// ============================================
-
-(function() {
-  const layers = document.querySelectorAll('.blueprint-layer');
-  
   if (layers.length === 0) return;
   
   let ticking = false;
@@ -198,4 +191,61 @@ document.addEventListener('DOMContentLoaded', function() {
   }
   
   window.addEventListener('scroll', requestTick, { passive: true });
+})();
+
+// ============================================
+// CINEMA BLUEPRINT BACKGROUND SYSTEM
+// ============================================
+
+(function() {
+  const sections = document.querySelectorAll('section[data-cinema]');
+  const body = document.body;
+  const indicator = document.getElementById('cinemaSection');
+  const labelTL = document.getElementById('cinemaLabelTL');
+  const cinemaNumber = document.getElementById('cinemaNumber');
+  
+  if (sections.length === 0) return;
+  
+  let currentSection = '01';
+  
+  // Intersection Observer untuk detect section aktif
+  const observerOptions = {
+    root: null,
+    rootMargin: '-40% 0px -40% 0px',
+    threshold: 0
+  };
+  
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const cinemaId = entry.target.getAttribute('data-cinema');
+        const cinemaLabel = entry.target.getAttribute('data-label');
+        
+        if (cinemaId !== currentSection) {
+          currentSection = cinemaId;
+          body.setAttribute('data-active', cinemaId);
+          
+          // Update indicator
+          if (indicator) {
+            indicator.textContent = `${cinemaId} · ${cinemaLabel}`;
+          }
+          
+          // Update label
+          if (labelTL) {
+            labelTL.textContent = `[ SYS / ${cinemaLabel} ]`;
+          }
+          
+          // Update big number (untuk section espresso)
+          if (cinemaNumber) {
+            cinemaNumber.textContent = cinemaId;
+          }
+        }
+      }
+    });
+  }, observerOptions);
+  
+  sections.forEach(section => observer.observe(section));
+  
+  // Set initial state
+  body.setAttribute('data-active', '01');
 })();
