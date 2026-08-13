@@ -9,6 +9,71 @@
 </head>
 <body>
 
+  <!-- ============================================ -->
+  <!-- BLUEPRINT CINEMATIC BACKGROUND (GLOBAL) -->
+  <!-- ============================================ -->
+  <div class="cinema-bg">
+    
+    <!-- Fixed Grid Layer -->
+    <div class="cinema-grid"></div>
+    
+    <!-- Central Circle System -->
+    <div class="cinema-circle-wrap">
+      <svg class="cinema-circle" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="400" cy="400" r="380" fill="none" stroke="currentColor" stroke-width="1" opacity="0.3"/>
+        <circle cx="400" cy="400" r="300" fill="none" stroke="currentColor" stroke-width="1" opacity="0.2"/>
+        <circle cx="400" cy="400" r="220" fill="none" stroke="currentColor" stroke-width="1" opacity="0.15"/>
+        <circle cx="400" cy="400" r="140" fill="none" stroke="currentColor" stroke-width="0.5" opacity="0.1"/>
+      </svg>
+    </div>
+    
+    <!-- Roasting Curve -->
+    <div class="cinema-curve-wrap">
+      <svg class="cinema-curve" viewBox="0 0 1200 400" xmlns="http://www.w3.org/2000/svg">
+        <path d="M 0,350 Q 300,200 600,180 T 1200,50" fill="none" stroke="currentColor" stroke-width="1.5" opacity="0.4"/>
+        <path d="M 0,380 L 1200,380" fill="none" stroke="currentColor" stroke-width="0.5" opacity="0.2"/>
+        <path d="M 0,20 L 1200,20" fill="none" stroke="currentColor" stroke-width="0.5" opacity="0.2"/>
+      </svg>
+    </div>
+    
+    <!-- Big Number Display -->
+    <div class="cinema-number" id="cinemaNumber">01</div>
+    
+    <!-- Big Formula Text -->
+    <div class="cinema-formula" id="cinemaFormula">PEOPLE × COFFEE × BUSINESS</div>
+    
+    <!-- Crosshairs -->
+    <div class="cinema-crosshair cinema-crosshair-1">
+      <div class="crosshair-line crosshair-h"></div>
+      <div class="crosshair-line crosshair-v"></div>
+      <div class="crosshair-dot"></div>
+    </div>
+    <div class="cinema-crosshair cinema-crosshair-2">
+      <div class="crosshair-line crosshair-h"></div>
+      <div class="crosshair-line crosshair-v"></div>
+      <div class="crosshair-dot"></div>
+    </div>
+    <div class="cinema-crosshair cinema-crosshair-3">
+      <div class="crosshair-line crosshair-h"></div>
+      <div class="crosshair-line crosshair-v"></div>
+      <div class="crosshair-dot"></div>
+    </div>
+    
+    <!-- Technical Labels -->
+    <span class="cinema-label cinema-label-tl" id="cinemaLabelTL">[ SYS / CORE ]</span>
+    <span class="cinema-label cinema-label-tr" id="cinemaLabelTR">TEMP 205°C</span>
+    <span class="cinema-label cinema-label-bl" id="cinemaLabelBL">BATCH 12KG</span>
+    <span class="cinema-label cinema-label-br" id="cinemaLabelBR">v.2026</span>
+    
+    <!-- Section Indicator -->
+    <div class="cinema-indicator">
+      <span class="cinema-indicator-text" id="cinemaSection">01 · CORE</span>
+      <div class="cinema-indicator-line"></div>
+    </div>
+    
+  </div>
+  <!-- END BLUEPRINT CINEMATIC BACKGROUND -->
+
   <!-- Navigation -->
   <nav class="nav">
     <div class="nav-inner">
@@ -33,44 +98,10 @@
     <a href="journal.html">Journal</a>
     <a href="contact.html">Talk to Us</a>
   </div>
-
-  <!-- Hero -->
-<section class="hero" id="home">
+<!-- Hero -->
+<section class="hero" id="home" data-cinema="01" data-label="CORE">
   <div class="hero-bg"></div>
   
-  <!-- Blueprint Parallax Layers -->
-  <div class="blueprint-layer blueprint-layer-1" data-speed="0.2">
-    <div class="blueprint-grid"></div>
-  </div>
-  
-  <div class="blueprint-layer blueprint-layer-2" data-speed="0.4">
-    <svg class="blueprint-circle" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="400" cy="400" r="380" fill="none" stroke="currentColor" stroke-width="1" opacity="0.3"/>
-      <circle cx="400" cy="400" r="300" fill="none" stroke="currentColor" stroke-width="1" opacity="0.2"/>
-      <circle cx="400" cy="400" r="220" fill="none" stroke="currentColor" stroke-width="1" opacity="0.15"/>
-    </svg>
-    <svg class="blueprint-curve" viewBox="0 0 1200 400" xmlns="http://www.w3.org/2000/svg">
-      <path d="M 0,350 Q 300,200 600,180 T 1200,50" fill="none" stroke="currentColor" stroke-width="1.5" opacity="0.4"/>
-      <path d="M 0,380 L 1200,380" fill="none" stroke="currentColor" stroke-width="0.5" opacity="0.2"/>
-      <path d="M 0,20 L 1200,20" fill="none" stroke="currentColor" stroke-width="0.5" opacity="0.2"/>
-    </svg>
-  </div>
-  
-  <div class="blueprint-layer blueprint-layer-3" data-speed="0.6">
-    <div class="blueprint-crosshair blueprint-crosshair-1">
-      <div class="crosshair-line crosshair-h"></div>
-      <div class="crosshair-line crosshair-v"></div>
-      <div class="crosshair-dot"></div>
-    </div>
-    <div class="blueprint-crosshair blueprint-crosshair-2">
-      <div class="crosshair-line crosshair-h"></div>
-      <div class="crosshair-line crosshair-v"></div>
-      <div class="crosshair-dot"></div>
-    </div>
-    <span class="blueprint-label blueprint-label-1">[ 001 / TITAN ]</span>
-    <span class="blueprint-label blueprint-label-2">TEMP 205°C</span>
-    <span class="blueprint-label blueprint-label-3">BATCH 12KG</span>
-  </div>
   <div class="hero-content">
     <h1 class="hero-headline">WE BUILD COFFEE<br>AROUND PEOPLE.</h1>
     <p class="hero-subline">Coffee built around how people drink, serve and grow.</p>
@@ -83,7 +114,7 @@
 </section>
   
   <!-- Philosophy -->
-  <section class="philosophy" id="philosophy">
+  <section class="philosophy" id="philosophy" data-cinema="02" data-label="PHILOSOPHY">
     <div class="philosophy-bg"></div>
     <div class="philosophy-content">
       <span class="label reveal">Philosophy</span>
@@ -99,6 +130,7 @@
   </section>
 
   <!-- Split Section (B2C/B2B) -->
+  <section class="split-section" id="audience" data-cinema="03" data-label="AUDIENCE">
   <div class="section-header center reveal">
   <span class="label">Audience</span>
   <h2>WHERE ARE YOU IN<br>THE STORY?</h2>
@@ -128,7 +160,7 @@
   </section>
 
   <!-- Espresso Series -->
-  <section class="espresso-section" id="espresso">
+ <section class="espresso-section" id="espresso" data-cinema="04" data-label="ESPRESSO">
     <div class="container">
       <div class="section-header center reveal">
         <span class="label">Espresso Series</span>
@@ -326,7 +358,7 @@
   </section>
 
   <!-- Coffee Finder -->
-  <section class="finder-section" id="finder">
+ <section class="finder-section" id="finder" data-cinema="05" data-label="FINDER">
     <div class="container">
       <div class="section-header center reveal">
         <span class="label">Coffee Finder</span>
@@ -363,7 +395,7 @@
   </section>
 
   <!-- Single Origin -->
-  <section class="origin-section" id="origin">
+  <section class="origin-section" id="origin" data-cinema="06" data-label="ORIGIN">
     <div class="container">
       <div class="section-header center reveal">
         <span class="label">Single Origin</span>
@@ -402,7 +434,7 @@
   </section>
 
   <!-- Business Philosophy -->
-  <section class="business-hero" id="business">
+  <section class="business-hero" id="business" data-cinema="07" data-label="BUSINESS">
     <div class="container">
       <div class="grid-2" style="align-items:center;">
         <div class="reveal">
@@ -432,7 +464,7 @@
   </section>
 
   <!-- Custom Blend -->
-  <section class="customblend-section" id="custom-blend">
+  <section class="customblend-section" id="custom-blend" data-cinema="08" data-label="CUSTOM">
     <div class="container">
       <div class="section-header center reveal">
   <span class="label">Custom Blend</span>
@@ -468,7 +500,7 @@
   </section>
 
   <!-- Why THREECORE -->
-  <section class="why-section" id="why">
+  <section class="why-section" id="why" data-cinema="09" data-label="WHY">
     <div class="container">
       <div class="section-header center reveal">
   <span class="label">Why Threecore</span>
@@ -496,7 +528,7 @@
   </section>
 
   <!-- Journal Preview -->
-  <section class="journal-section" id="journal">
+  <section class="journal-section" id="journal" data-cinema="10" data-label="JOURNAL">
     <div class="container">
       <div class="section-header center reveal">
         <span class="label">Journal</span>
@@ -536,7 +568,7 @@
   </section>
 
   <!-- Final CTA / Contact -->
-  <section class="contact-section" id="contact">
+  <section class="contact-section" id="contact" data-cinema="11" data-label="CONTACT">
     <div class="container">
       <div class="section-header center reveal">
         <span class="label">Contact</span>
