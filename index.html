@@ -9,71 +9,6 @@
 </head>
 <body>
 
-  <!-- ============================================ -->
-  <!-- BLUEPRINT CINEMATIC BACKGROUND (GLOBAL) -->
-  <!-- ============================================ -->
-  <div class="cinema-bg">
-    
-    <!-- Fixed Grid Layer -->
-    <div class="cinema-grid"></div>
-    
-    <!-- Central Circle System -->
-    <div class="cinema-circle-wrap">
-      <svg class="cinema-circle" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="400" cy="400" r="380" fill="none" stroke="currentColor" stroke-width="1" opacity="0.3"/>
-        <circle cx="400" cy="400" r="300" fill="none" stroke="currentColor" stroke-width="1" opacity="0.2"/>
-        <circle cx="400" cy="400" r="220" fill="none" stroke="currentColor" stroke-width="1" opacity="0.15"/>
-        <circle cx="400" cy="400" r="140" fill="none" stroke="currentColor" stroke-width="0.5" opacity="0.1"/>
-      </svg>
-    </div>
-    
-    <!-- Roasting Curve -->
-    <div class="cinema-curve-wrap">
-      <svg class="cinema-curve" viewBox="0 0 1200 400" xmlns="http://www.w3.org/2000/svg">
-        <path d="M 0,350 Q 300,200 600,180 T 1200,50" fill="none" stroke="currentColor" stroke-width="1.5" opacity="0.4"/>
-        <path d="M 0,380 L 1200,380" fill="none" stroke="currentColor" stroke-width="0.5" opacity="0.2"/>
-        <path d="M 0,20 L 1200,20" fill="none" stroke="currentColor" stroke-width="0.5" opacity="0.2"/>
-      </svg>
-    </div>
-    
-    <!-- Big Number Display -->
-    <div class="cinema-number" id="cinemaNumber">01</div>
-    
-    <!-- Big Formula Text -->
-    <div class="cinema-formula" id="cinemaFormula">PEOPLE × COFFEE × BUSINESS</div>
-    
-    <!-- Crosshairs -->
-    <div class="cinema-crosshair cinema-crosshair-1">
-      <div class="crosshair-line crosshair-h"></div>
-      <div class="crosshair-line crosshair-v"></div>
-      <div class="crosshair-dot"></div>
-    </div>
-    <div class="cinema-crosshair cinema-crosshair-2">
-      <div class="crosshair-line crosshair-h"></div>
-      <div class="crosshair-line crosshair-v"></div>
-      <div class="crosshair-dot"></div>
-    </div>
-    <div class="cinema-crosshair cinema-crosshair-3">
-      <div class="crosshair-line crosshair-h"></div>
-      <div class="crosshair-line crosshair-v"></div>
-      <div class="crosshair-dot"></div>
-    </div>
-    
-    <!-- Technical Labels -->
-    <span class="cinema-label cinema-label-tl" id="cinemaLabelTL">[ SYS / CORE ]</span>
-    <span class="cinema-label cinema-label-tr" id="cinemaLabelTR">TEMP 205°C</span>
-    <span class="cinema-label cinema-label-bl" id="cinemaLabelBL">BATCH 12KG</span>
-    <span class="cinema-label cinema-label-br" id="cinemaLabelBR">v.2026</span>
-    
-    <!-- Section Indicator -->
-    <div class="cinema-indicator">
-      <span class="cinema-indicator-text" id="cinemaSection">01 · CORE</span>
-      <div class="cinema-indicator-line"></div>
-    </div>
-    
-  </div>
-  <!-- END BLUEPRINT CINEMATIC BACKGROUND -->
-
   <!-- Navigation -->
   <nav class="nav">
     <div class="nav-inner">
@@ -98,23 +33,23 @@
     <a href="journal.html">Journal</a>
     <a href="contact.html">Talk to Us</a>
   </div>
-<!-- Hero -->
-<section class="hero" id="home" data-cinema="01" data-label="CORE">
-  <div class="hero-bg"></div>
-  
-  <div class="hero-content">
-    <h1 class="hero-headline">WE BUILD COFFEE<br>AROUND PEOPLE.</h1>
-    <p class="hero-subline">Coffee built around how people drink, serve and grow.</p>
-    <div class="hero-cta btn-group">
-      <a href="coffee.html" class="btn btn-primary">Explore Coffee</a>
-      <a href="business.html" class="btn btn-secondary">For Business</a>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <h1 class="hero-headline">WE BUILD COFFEE<br>AROUND PEOPLE.</h1>
+      <p class="hero-subline">Coffee built around how people drink, serve and grow.</p>
+      <div class="hero-cta btn-group">
+        <a href="coffee.html" class="btn btn-primary">Explore Coffee</a>
+        <a href="business.html" class="btn btn-secondary">For Business</a>
+      </div>
     </div>
-  </div>
-  <div class="hero-formula">PEOPLE × COFFEE × BUSINESS</div>
-</section>
-  
+    <div class="hero-formula">PEOPLE × COFFEE × BUSINESS</div>
+  </section>
+
   <!-- Philosophy -->
-  <section class="philosophy" id="philosophy" data-cinema="02" data-label="PHILOSOPHY">
+  <section class="philosophy" id="philosophy">
     <div class="philosophy-bg"></div>
     <div class="philosophy-content">
       <span class="label reveal">Philosophy</span>
@@ -130,37 +65,38 @@
   </section>
 
   <!-- Split Section (B2C/B2B) -->
-  <section class="split-section" id="audience" data-cinema="03" data-label="AUDIENCE">
-  <div class="section-header center reveal">
-  <span class="label">Audience</span>
-  <h2>WHERE ARE YOU IN<br>THE STORY?</h2>
-  <p>Di mana posisi Anda dalam cerita ini?</p>
-</div>
- <div class="split-grid reveal">
-   <div class="split-item">
-     <div class="split-item-bg"></div>
-     <span class="label split-label">B2C</span>
-     <h3 class="split-headline">For Your Cup</h3>
-     <p class="split-body">Kopi untuk mereka yang ingin menemukan, belajar, dan menikmati kopi dengan lebih baik.</p>
-     <p class="split-pain">"Belum yakin kopi mana yang cocok untuk Anda?"</p>
-     <p class="split-desire">Temukan kopi yang benar-benar Anda sukai.</p>
-     <a href="coffee.html" class="btn btn-primary">Explore Coffee</a>
-   </div>
-   <div class="split-item">
-     <div class="split-item-bg"></div>
-     <span class="label split-label">B2B</span>
-     <h3 class="split-headline">For Your Business</h3>
-     <p class="split-body">Kopi yang dirancang sesuai pelanggan, menu, dan margin bisnis Anda.</p>
-     <p class="split-pain">"Kopi yang enak saja tidak cukup jika tidak cocok untuk bisnis Anda."</p>
-     <p class="split-desire">Build Your Coffee Program yang masuk akal dari cangkir hingga margin.</p>
-     <a href="business.html" class="btn btn-primary">Build Your Coffee Program</a>
-   </div>
-</div>
+  <section class="split-section" id="audience">
+    <div class="container">
+      <div class="section-header center reveal">
+        <span class="label">Audience</span>
+        <h2>WHERE ARE YOU IN<br>THE STORY?</h2>
+        <p>Di mana posisi Anda dalam cerita ini?</p>
+      </div>
+      <div class="split-grid reveal">
+        <div class="split-item">
+          <div class="split-item-bg"></div>
+          <span class="label split-label">B2C</span>
+          <h3 class="split-headline">For Your Cup</h3>
+          <p class="split-body">Kopi untuk mereka yang ingin menemukan, belajar, dan menikmati kopi dengan lebih baik.</p>
+          <p class="split-pain">"Belum yakin kopi mana yang cocok untuk Anda?"</p>
+          <p class="split-desire">Temukan kopi yang benar-benar Anda sukai.</p>
+          <a href="coffee.html" class="btn btn-primary">Explore Coffee</a>
+        </div>
+        <div class="split-item">
+          <div class="split-item-bg"></div>
+          <span class="label split-label">B2B</span>
+          <h3 class="split-headline">For Your Business</h3>
+          <p class="split-body">Kopi yang dirancang sesuai pelanggan, menu, dan margin bisnis Anda.</p>
+          <p class="split-pain">"Kopi yang enak saja tidak cukup jika tidak cocok untuk bisnis Anda."</p>
+          <p class="split-desire">Build Your Coffee Program yang masuk akal dari cangkir hingga margin.</p>
+          <a href="business.html" class="btn btn-primary">Build Your Coffee Program</a>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Espresso Series -->
- <section class="espresso-section" id="espresso" data-cinema="04" data-label="ESPRESSO">
+  <section class="espresso-section" id="espresso">
     <div class="container">
       <div class="section-header center reveal">
         <span class="label">Espresso Series</span>
@@ -186,7 +122,7 @@
           </div>
           <div class="product-card-reason">
             <h5>For Your Cup</h5>
-            <p>kspresi murni dari karakter Robusta. Body tebal dengan karakter dark chocolate, tobacco, cedar, dan earthy yang kuat, acidity rendah, serta finish panjang dan intens. Tanpa campuran Arabica, Titan menawarkan profil yang langsung, tegas, dan penuh tenaga.</p>
+            <p>Ekspresi murni dari karakter Robusta. Body tebal dengan karakter dark chocolate, tobacco, cedar, dan earthy yang kuat, acidity rendah, serta finish panjang dan intens. Tanpa campuran Arabica, Titan menawarkan profil yang langsung, tegas, dan penuh tenaga.</p>
           </div>
           <div class="product-card-meta">
             <div class="meta-item"><span>Body</span><strong>5/5</strong></div>
@@ -358,7 +294,7 @@
   </section>
 
   <!-- Coffee Finder -->
- <section class="finder-section" id="finder" data-cinema="05" data-label="FINDER">
+  <section class="finder-section" id="finder">
     <div class="container">
       <div class="section-header center reveal">
         <span class="label">Coffee Finder</span>
@@ -395,7 +331,7 @@
   </section>
 
   <!-- Single Origin -->
-  <section class="origin-section" id="origin" data-cinema="06" data-label="ORIGIN">
+  <section class="origin-section" id="origin">
     <div class="container">
       <div class="section-header center reveal">
         <span class="label">Single Origin</span>
@@ -434,101 +370,101 @@
   </section>
 
   <!-- Business Philosophy -->
-  <section class="business-hero" id="business" data-cinema="07" data-label="BUSINESS">
+  <section class="business-hero" id="business">
     <div class="container">
       <div class="grid-2" style="align-items:center;">
         <div class="reveal">
-  <span class="label">For Business</span>
-  <h2 style="font-size: clamp(2.5rem, 6vw, 5rem); margin-bottom: var(--space-md);">COFFEE THAT WORKS FOR YOUR BUSINESS.</h2>
-  <p style="color: var(--tcr-gray-light); font-size: 1.1rem; margin-bottom: var(--space-lg); max-width: 500px;">
-    Kami tidak memulai dari "Kopi apa yang ingin kami jual?" Kami memulai dari "Apa yang harus dicapai kopi ini untuk bisnis Anda?"
-  </p>
-  <a href="business.html" class="btn btn-primary">Bangun Coffee Program Anda</a>
-</div>
-<div class="reveal reveal-delay-2" style="display:grid; gap: var(--space-md);">
-  <div style="padding: var(--space-md); background: var(--tcr-black); border: 1px solid var(--tcr-charcoal); border-left: 3px solid var(--tcr-copper);">
-    <h4 style="font-size: 1.1rem; margin-bottom: 0.5rem;">Customer</h4>
-    <p style="color: var(--tcr-gray-light); font-size: 0.9rem;">Siapa yang Anda layani?</p>
-  </div>
-  <div style="padding: var(--space-md); background: var(--tcr-black); border: 1px solid var(--tcr-charcoal); border-left: 3px solid var(--tcr-copper);">
-    <h4 style="font-size: 1.1rem; margin-bottom: 0.5rem;">Menu</h4>
-    <p style="color: var(--tcr-gray-light); font-size: 0.9rem;">Di mana posisi kopi dalam menu?</p>
-  </div>
-  <div style="padding: var(--space-md); background: var(--tcr-black); border: 1px solid var(--tcr-charcoal); border-left: 3px solid var(--tcr-copper);">
-    <h4 style="font-size: 1.1rem; margin-bottom: 0.5rem;">Margin</h4>
-    <p style="color: var(--tcr-gray-light); font-size: 0.9rem;">Apakah masuk akal secara bisnis?</p>
-  </div>
-</div>
+          <span class="label">For Business</span>
+          <h2 style="font-size: clamp(2.5rem, 6vw, 5rem); margin-bottom: var(--space-md);">COFFEE THAT WORKS FOR YOUR BUSINESS.</h2>
+          <p style="color: var(--tcr-gray-light); font-size: 1.1rem; margin-bottom: var(--space-lg); max-width: 500px;">
+            Kami tidak memulai dari "Kopi apa yang ingin kami jual?" Kami memulai dari "Apa yang harus dicapai kopi ini untuk bisnis Anda?"
+          </p>
+          <a href="business.html" class="btn btn-primary">Bangun Coffee Program Anda</a>
+        </div>
+        <div class="reveal reveal-delay-2" style="display:grid; gap: var(--space-md);">
+          <div style="padding: var(--space-md); background: var(--tcr-black); border: 1px solid var(--tcr-charcoal); border-left: 3px solid var(--tcr-copper);">
+            <h4 style="font-size: 1.1rem; margin-bottom: 0.5rem;">Customer</h4>
+            <p style="color: var(--tcr-gray-light); font-size: 0.9rem;">Siapa yang Anda layani?</p>
+          </div>
+          <div style="padding: var(--space-md); background: var(--tcr-black); border: 1px solid var(--tcr-charcoal); border-left: 3px solid var(--tcr-copper);">
+            <h4 style="font-size: 1.1rem; margin-bottom: 0.5rem;">Menu</h4>
+            <p style="color: var(--tcr-gray-light); font-size: 0.9rem;">Di mana posisi kopi dalam menu?</p>
+          </div>
+          <div style="padding: var(--space-md); background: var(--tcr-black); border: 1px solid var(--tcr-charcoal); border-left: 3px solid var(--tcr-copper);">
+            <h4 style="font-size: 1.1rem; margin-bottom: 0.5rem;">Margin</h4>
+            <p style="color: var(--tcr-gray-light); font-size: 0.9rem;">Apakah masuk akal secara bisnis?</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Custom Blend -->
-  <section class="customblend-section" id="custom-blend" data-cinema="08" data-label="CUSTOM">
+  <section class="customblend-section" id="custom-blend">
     <div class="container">
       <div class="section-header center reveal">
-  <span class="label">Custom Blend</span>
-  <h2>YOUR BUSINESS ISN'T GENERIC.<br>WHY SHOULD YOUR COFFEE BE?</h2>
-  <p>Signature blend yang dikembangkan khusus untuk brand, menu, dan pelanggan Anda.</p>
-</div>
-<div class="process-timeline reveal">
-  <div class="process-step">
-    <div class="process-step-dot"></div>
-    <h5>Discover</h5>
-    <p>Kami mempelajari bisnis, menu, dan tujuan Anda.</p>
-  </div>
-  <div class="process-step">
-    <div class="process-step-dot"></div>
-    <h5>Develop</h5>
-    <p>Kami merancang blend sesuai kebutuhan Anda.</p>
-  </div>
-  <div class="process-step">
-    <div class="process-step-dot"></div>
-    <h5>Test</h5>
-    <p>Anda cupping, kami iterasi. Sampai benar-benar pas.</p>
-  </div>
-  <div class="process-step">
-    <div class="process-step-dot"></div>
-    <h5>Produce</h5>
-    <p>Supply konsisten, batch demi batch.</p>
-  </div>
-</div>
-<div style="text-align:center; margin-top: var(--space-xl);">
-  <a href="business.html#custom-blend" class="btn btn-primary">Bangun Blend Anda</a>
-</div>
+        <span class="label">Custom Blend</span>
+        <h2>YOUR BUSINESS ISN'T GENERIC.<br>WHY SHOULD YOUR COFFEE BE?</h2>
+        <p>Signature blend yang dikembangkan khusus untuk brand, menu, dan pelanggan Anda.</p>
+      </div>
+      <div class="process-timeline reveal">
+        <div class="process-step">
+          <div class="process-step-dot"></div>
+          <h5>Discover</h5>
+          <p>Kami mempelajari bisnis, menu, dan tujuan Anda.</p>
+        </div>
+        <div class="process-step">
+          <div class="process-step-dot"></div>
+          <h5>Develop</h5>
+          <p>Kami merancang blend sesuai kebutuhan Anda.</p>
+        </div>
+        <div class="process-step">
+          <div class="process-step-dot"></div>
+          <h5>Test</h5>
+          <p>Anda cupping, kami iterasi. Sampai benar-benar pas.</p>
+        </div>
+        <div class="process-step">
+          <div class="process-step-dot"></div>
+          <h5>Produce</h5>
+          <p>Supply konsisten, batch demi batch.</p>
+        </div>
+      </div>
+      <div style="text-align:center; margin-top: var(--space-xl);">
+        <a href="business.html#custom-blend" class="btn btn-primary">Bangun Blend Anda</a>
+      </div>
     </div>
   </section>
 
   <!-- Why THREECORE -->
-  <section class="why-section" id="why" data-cinema="09" data-label="WHY">
+  <section class="why-section" id="why">
     <div class="container">
       <div class="section-header center reveal">
-  <span class="label">Why Threecore</span>
-  <h2>NOT JUST A SUPPLIER.<br>A PARTNER.</h2>
-</div>
-<div class="why-grid">
-  <div class="why-item reveal">
-    <h4>Product Line Depth</h4>
-    <p>Enam blend espresso yang berbeda, ditambah rolling single origin dan layanan custom blend. Tidak ada roastery lain di Indonesia yang menawarkan keluasan ini dengan tingkat kesungguhan yang sama.</p>
-  </div>
-  <div class="why-item reveal reveal-delay-1">
-    <h4>Bold Brand Identity</h4>
-    <p>Positioning industrial-premium yang menonjol di antara kompetitor yang corporate-boring atau artisan-generic. Supplier kopi Anda seharusnya mencerminkan standar Anda.</p>
-  </div>
-  <div class="why-item reveal reveal-delay-2">
-    <h4>Business-First Approach</h4>
-    <p>Kami memahami margin, konsistensi, workflow, dan kesesuaian menu. Pendekatan konsultatif kami berarti kami menjual solusi, bukan sekadar biji kopi.</p>
-  </div>
-  <div class="why-item reveal reveal-delay-3">
-    <h4>Dual-Segment Mastery</h4>
-    <p>Tiga tahun melayani 20+ klien B2B sambil membangun komunitas home brewer. Kami memahami kedua sisi cangkir.</p>
-  </div>
-</div>
+        <span class="label">Why Threecore</span>
+        <h2>NOT JUST A SUPPLIER.<br>A PARTNER.</h2>
+      </div>
+      <div class="why-grid">
+        <div class="why-item reveal">
+          <h4>Product Line Depth</h4>
+          <p>Enam blend espresso yang berbeda, ditambah rolling single origin dan layanan custom blend. Tidak ada roastery lain di Indonesia yang menawarkan keluasan ini dengan tingkat kesungguhan yang sama.</p>
+        </div>
+        <div class="why-item reveal reveal-delay-1">
+          <h4>Bold Brand Identity</h4>
+          <p>Positioning industrial-premium yang menonjol di antara kompetitor yang corporate-boring atau artisan-generic. Supplier kopi Anda seharusnya mencerminkan standar Anda.</p>
+        </div>
+        <div class="why-item reveal reveal-delay-2">
+          <h4>Business-First Approach</h4>
+          <p>Kami memahami margin, konsistensi, workflow, dan kesesuaian menu. Pendekatan konsultatif kami berarti kami menjual solusi, bukan sekadar biji kopi.</p>
+        </div>
+        <div class="why-item reveal reveal-delay-3">
+          <h4>Dual-Segment Mastery</h4>
+          <p>Tiga tahun melayani 20+ klien B2B sambil membangun komunitas home brewer. Kami memahami kedua sisi cangkir.</p>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Journal Preview -->
-  <section class="journal-section" id="journal" data-cinema="10" data-label="JOURNAL">
+  <section class="journal-section" id="journal">
     <div class="container">
       <div class="section-header center reveal">
         <span class="label">Journal</span>
@@ -568,7 +504,7 @@
   </section>
 
   <!-- Final CTA / Contact -->
-  <section class="contact-section" id="contact" data-cinema="11" data-label="CONTACT">
+  <section class="contact-section" id="contact">
     <div class="container">
       <div class="section-header center reveal">
         <span class="label">Contact</span>
