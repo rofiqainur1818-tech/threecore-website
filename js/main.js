@@ -1,4 +1,3 @@
-
 // ============================================
 // THREECORE — MAIN JAVASCRIPT
 // ============================================
@@ -116,7 +115,7 @@ document.addEventListener('DOMContentLoaded', function() {
     option.addEventListener('click', function() {
       const preference = this.dataset.preference;
       const recommendation = getCoffeeRecommendation(preference);
-      alert(recommendation); // In production, this would navigate or show a modal
+      alert(recommendation);
     });
   });
 
@@ -166,86 +165,3 @@ document.addEventListener('DOMContentLoaded', function() {
 
   console.log('THREECORE website initialized.');
 });
-
-  if (layers.length === 0) return;
-  
-  let ticking = false;
-  
-  function updateParallax() {
-    const scrolled = window.pageYOffset;
-    
-    layers.forEach(layer => {
-      const speed = parseFloat(layer.getAttribute('data-speed')) || 0.3;
-      const yPos = -(scrolled * speed);
-      layer.style.transform = `translate3d(0, ${yPos}px, 0)`;
-    });
-    
-    ticking = false;
-  }
-  
-  function requestTick() {
-    if (!ticking) {
-      requestAnimationFrame(updateParallax);
-      ticking = true;
-    }
-  }
-  
-  window.addEventListener('scroll', requestTick, { passive: true });
-})();
-
-// ============================================
-// CINEMA BLUEPRINT BACKGROUND SYSTEM
-// ============================================
-
-(function() {
-  const sections = document.querySelectorAll('section[data-cinema]');
-  const body = document.body;
-  const indicator = document.getElementById('cinemaSection');
-  const labelTL = document.getElementById('cinemaLabelTL');
-  const cinemaNumber = document.getElementById('cinemaNumber');
-  
-  if (sections.length === 0) return;
-  
-  let currentSection = '01';
-  
-  // Intersection Observer untuk detect section aktif
-  const observerOptions = {
-    root: null,
-    rootMargin: '-40% 0px -40% 0px',
-    threshold: 0
-  };
-  
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const cinemaId = entry.target.getAttribute('data-cinema');
-        const cinemaLabel = entry.target.getAttribute('data-label');
-        
-        if (cinemaId !== currentSection) {
-          currentSection = cinemaId;
-          body.setAttribute('data-active', cinemaId);
-          
-          // Update indicator
-          if (indicator) {
-            indicator.textContent = `${cinemaId} · ${cinemaLabel}`;
-          }
-          
-          // Update label
-          if (labelTL) {
-            labelTL.textContent = `[ SYS / ${cinemaLabel} ]`;
-          }
-          
-          // Update big number (untuk section espresso)
-          if (cinemaNumber) {
-            cinemaNumber.textContent = cinemaId;
-          }
-        }
-      }
-    });
-  }, observerOptions);
-  
-  sections.forEach(section => observer.observe(section));
-  
-  // Set initial state
-  body.setAttribute('data-active', '01');
-})();
