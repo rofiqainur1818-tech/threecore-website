@@ -586,22 +586,8 @@ h4 { font-size: clamp(1.2rem, 2vw, 1.8rem); }
 
 
 /* =========================================================
-   CONTENT DI ATAS BACKGROUND
-   ========================================================= */
-
-body > *:not(.ambient-bg) {
-    position: relative;
-    z-index: 1;
-}
-
-
-/* =========================================================
    BIARKAN BACKGROUND TERLIHAT
    ========================================================= */
-
-main section {
-    background-color: transparent !important;
-}
 
 
 /* Hero tetap punya sedikit darkness */
