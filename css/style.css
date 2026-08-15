@@ -528,10 +528,10 @@ h4 { font-size: clamp(1.2rem, 2vw, 1.8rem); }
 .ambient-bg__wheel-wrap {
     position: absolute;
 
-    width: min(52vw, 760px);
+    width: min(50vw, 720px);
     aspect-ratio: 1;
 
-    right: 18%;
+    right: 8%;
     top: 50%;
 
     z-index: 10;
@@ -540,7 +540,7 @@ h4 { font-size: clamp(1.2rem, 2vw, 1.8rem); }
         translate3d(0, -50%, 0)
         rotate(0deg);
 
-    opacity: 0.28;
+    opacity: 0.23;
 
     pointer-events: none;
 
