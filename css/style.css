@@ -383,6 +383,79 @@ h4 { font-size: clamp(1.2rem, 2vw, 1.8rem); }
 ::-webkit-scrollbar-thumb { background: var(--tcr-charcoal); }
 ::-webkit-scrollbar-thumb:hover { background: var(--tcr-copper); }
 
+/* ============================================
+   PRODUCT CARD POSTER (Foto Poster Style)
+   ============================================ */
+
+.product-card-poster {
+  display: flex;
+  flex-direction: column;
+  background: var(--tcr-black-soft);
+  border: 1px solid var(--tcr-charcoal);
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  transition: all var(--duration-medium) var(--ease-smooth);
+  height: 100%;
+  cursor: pointer;
+}
+
+.product-card-poster:hover {
+  border-color: var(--tcr-copper);
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Container Image */
+.product-card-poster-img {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  overflow: hidden;
+  background: var(--tcr-black);
+}
+
+.product-card-poster-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.8s var(--ease-power);
+}
+
+.product-card-poster:hover .product-card-poster-img img {
+  transform: scale(1.05);
+}
+
+/* CTA Button */
+.product-card-poster-cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-md) var(--space-md);
+  background: var(--tcr-copper);
+  color: var(--tcr-white);
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  transition: background var(--duration-fast);
+}
+
+.product-card-poster:hover .product-card-poster-cta {
+  background: var(--tcr-copper-light);
+}
+
+.product-card-poster-cta .arrow {
+  transition: transform var(--duration-fast) var(--ease-power);
+  font-size: 1.2rem;
+}
+
+.product-card-poster:hover .product-card-poster-cta .arrow {
+  transform: translateX(6px);
+}
+
 /* Responsive */
 @media (max-width: 1024px) {
   .grid-2, .split-grid, .origin-grid, .why-grid, .story-grid, .product-detail-grid { grid-template-columns: 1fr; }
