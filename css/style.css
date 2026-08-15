@@ -540,7 +540,7 @@ h4 { font-size: clamp(1.2rem, 2vw, 1.8rem); }
         translate3d(0, -50%, 0)
         rotate(0deg);
 
-    opacity: 0.30;
+    opacity: 0.18;
 
     pointer-events: none;
 
@@ -553,8 +553,9 @@ h4 { font-size: clamp(1.2rem, 2vw, 1.8rem); }
     height: 100%;
 
     display: block;
-
     object-fit: contain;
+
+    mix-blend-mode: screen;
 
     filter:
         brightness(0.62)
@@ -562,7 +563,6 @@ h4 { font-size: clamp(1.2rem, 2vw, 1.8rem); }
         saturate(0.75);
 
     transform-origin: center center;
-
     will-change: transform;
 }
 
