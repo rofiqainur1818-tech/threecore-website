@@ -531,7 +531,7 @@ h4 { font-size: clamp(1.2rem, 2vw, 1.8rem); }
     width: min(72vw, 900px);
     aspect-ratio: 1;
 
-    right: -18%;
+    right: 18%;
     top: 50%;
 
     z-index: 10;
@@ -540,7 +540,7 @@ h4 { font-size: clamp(1.2rem, 2vw, 1.8rem); }
         translate3d(0, -50%, 0)
         rotate(0deg);
 
-    opacity: 0.18;
+    opacity: 0.28;
 
     pointer-events: none;
 
