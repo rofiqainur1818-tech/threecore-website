@@ -392,6 +392,8 @@ h4 { font-size: clamp(1.2rem, 2vw, 1.8rem); }
   flex-direction: column;
   background: var(--tcr-black-soft);
   border: 1px solid var(--tcr-charcoal);
+  padding: var(--space-md);
+  gap: var(--space-md);
   overflow: hidden;
   text-decoration: none;
   color: inherit;
@@ -431,8 +433,9 @@ h4 { font-size: clamp(1.2rem, 2vw, 1.8rem); }
 .product-card-poster-cta {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: var(--space-md) var(--space-md);
+  justify-content: center;
+  gap: var(--space-sm);
+  padding: 1rem 2rem;
   background: var(--tcr-copper);
   color: var(--tcr-white);
   font-family: var(--font-body);
@@ -441,6 +444,7 @@ h4 { font-size: clamp(1.2rem, 2vw, 1.8rem); }
   text-transform: uppercase;
   letter-spacing: 0.15em;
   transition: background var(--duration-fast);
+  margin-top: auto;
 }
 
 .product-card-poster:hover .product-card-poster-cta {
