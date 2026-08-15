@@ -1,600 +1,223 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Threecore Crafted Roaster — B2B+B2C coffee brand built around people. Six espresso blends, single origin rolling, custom blend service. Sidoarjo, Jawa Timur.">
-  <title>THREECORE — Crafted Roaster</title>
+
+  <title>Threecore — Coffee Crafted by Three Forces</title>
+  <meta name="description" content="Threecore — Coffee crafted by three forces: Fire, Water, and Earth.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Main Styles -->
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
-    <!-- THREECORE CINEMATIC BACKGROUND -->
-    <div class="ambient-bg" aria-hidden="true">
-
-        <div class="ambient-bg__plate"></div>
-
-        <div class="ambient-bg__copper-glow"></div>
-
-        <div class="ambient-bg__wheel-wrap">
-            <img
-                class="ambient-bg__wheel"
-                src="assets/background/flavour-wheel.png"
-                alt=""
-            >
-        </div>
-
-        <div class="ambient-bg__vignette"></div>
-
-    </div>
-
   <!-- Navigation -->
-  <nav class="nav">
-    <div class="nav-inner">
-      <a href="index.html" class="nav-logo">THREE<span>CORE</span></a>
-      <ul class="nav-links">
-        <li><a href="coffee.html">Coffee</a></li>
-        <li><a href="business.html">For Business</a></li>
-        <li><a href="story.html">Our Story</a></li>
-        <li><a href="journal.html">Journal</a></li>
-      </ul>
-      <a href="contact.html" class="nav-cta">Talk to Us</a>
-      <button class="nav-mobile-toggle" aria-label="Open menu">☰</button>
+  <nav class="navbar">
+    <div class="nav-container">
+
+      <a href="#home" class="nav-logo">
+        <span class="logo-mark">T</span>
+        <span class="logo-text">THREECORE</span>
+      </a>
+
+      <div class="nav-links">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#philosophy" class="nav-link">Philosophy</a>
+        <a href="#for-business" class="nav-link">For Business</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </div>
+
+      <button class="nav-menu-toggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
     </div>
   </nav>
 
-  <!-- Mobile Menu -->
-  <div class="mobile-menu">
-    <button class="mobile-close" aria-label="Close menu">✕</button>
-    <a href="coffee.html">Coffee</a>
-    <a href="business.html">For Business</a>
-    <a href="story.html">Our Story</a>
-    <a href="journal.html">Journal</a>
-    <a href="contact.html">Talk to Us</a>
-  </div>
-
   <!-- Hero -->
-  <section class="hero" id="home">
-    <div class="hero-bg"></div>
-    <div class="hero-content">
-      <h1 class="hero-headline">WE BUILD COFFEE<br>AROUND PEOPLE.</h1>
-      <p class="hero-subline">Coffee built around how people drink, serve and grow.</p>
-      <div class="hero-cta btn-group">
-        <a href="coffee.html" class="btn btn-primary">Explore Coffee</a>
-        <a href="business.html" class="btn btn-secondary">For Business</a>
-      </div>
-    </div>
-    <div class="hero-formula">PEOPLE × COFFEE × BUSINESS</div>
-  </section>
+  <main>
 
-  <!-- Philosophy -->
-  <section class="philosophy" id="philosophy">
-    <div class="philosophy-bg"></div>
-    <div class="philosophy-content">
-      <span class="label reveal">Philosophy</span>
-      <h2 class="philosophy-headline reveal">COFFEE IS NEVER<br>JUST COFFEE.</h2>
-      <div class="philosophy-steps">
-        <p class="philosophy-step">Someone drinks it.</p>
-        <p class="philosophy-step">Someone serves it.</p>
-        <p class="philosophy-step">Someone builds a business around it.</p>
-        <p class="philosophy-step">And the coffee connects them.</p>
-      </div>
-      <div class="philosophy-formula reveal">PEOPLE × COFFEE × BUSINESS</div>
-    </div>
-  </section>
+    <section id="home" class="hero-section">
 
-  <!-- Split Section (B2C/B2B) -->
-  <section class="split-section" id="audience">
-    <div class="container">
-      <div class="section-header center reveal">
-        <span class="label">Audience</span>
-        <h2>WHERE ARE YOU IN<br>THE STORY?</h2>
-        <p>Di mana posisi Anda dalam cerita ini?</p>
-      </div>
-      <div class="split-grid reveal">
-        <div class="split-item">
-          <div class="split-item-bg"></div>
-          <span class="label split-label">B2C</span>
-          <h3 class="split-headline">For Your Cup</h3>
-          <p class="split-body">Kopi untuk mereka yang ingin menemukan, belajar, dan menikmati kopi dengan lebih baik.</p>
-          <p class="split-pain">"Belum yakin kopi mana yang cocok untuk Anda?"</p>
-          <p class="split-desire">Temukan kopi yang benar-benar Anda sukai.</p>
-          <a href="coffee.html" class="btn btn-primary">Explore Coffee</a>
+      <div class="hero-content">
+
+        <div class="hero-label">
+          <span class="label-line"></span>
+          <span>COFFEE CRAFTED BY THREE FORCES</span>
         </div>
-        <div class="split-item">
-          <div class="split-item-bg"></div>
-          <span class="label split-label">B2B</span>
-          <h3 class="split-headline">For Your Business</h3>
-          <p class="split-body">Kopi yang dirancang sesuai pelanggan, menu, dan margin bisnis Anda.</p>
-          <p class="split-pain">"Kopi yang enak saja tidak cukup jika tidak cocok untuk bisnis Anda."</p>
-          <p class="split-desire">Build Your Coffee Program yang masuk akal dari cangkir hingga margin.</p>
-          <a href="business.html" class="btn btn-primary">Build Your Coffee Program</a>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- Espresso Series -->
-  <section class="espresso-section" id="espresso">
-    <div class="container">
-      <div class="section-header center reveal">
-        <span class="label">Espresso Series</span>
-        <h2>SIX COFFEES.<br>SIX REASONS TO CHOOSE.</h2>
-        <p>Dirancang khusus untuk espresso. Setiap blend menjawab kebutuhan spesifik — baik untuk cangkir Anda maupun bisnis Anda.</p>
+        <h1 class="hero-title">
+          <span class="hero-title-line">FIRE.</span>
+          <span class="hero-title-line">WATER.</span>
+          <span class="hero-title-line">EARTH.</span>
+        </h1>
+
+        <p class="hero-description">
+          Where the elements converge to create exceptional coffee.
+        </p>
+
+        <a href="#philosophy" class="hero-cta">
+          <span>Discover Threecore</span>
+          <span class="cta-arrow">↓</span>
+        </a>
+
       </div>
 
-      <div class="espresso-grid">
-        <!-- TITAN -->
-        <div class="product-card reveal reveal-delay-1">
-          <div class="product-card-number">01 / 06</div>
-          <h3 class="product-card-name">TITAN</h3>
-          <p class="product-card-tagline">The Powerhouse</p>
-          <div class="product-card-flavor">
-            <span class="flavor-tag">Dark Chocolate</span>
-            <span class="flavor-tag">Tobacco</span>
-            <span class="flavor-tag">Earthy</span>
-            <span class="flavor-tag">Cedar</span>
-          </div>
-          <div class="product-card-reason">
-            <h5>For Business</h5>
-            <p>Dirancang untuk kedai yang membutuhkan karakter kopi yang kuat, konsisten, dan mudah diandalkan. Body yang tebal dan karakter intens membuat Titan sangat cocok untuk espresso maupun minuman berbasis susu.</p>
-          </div>
-          <div class="product-card-reason">
-            <h5>For Your Cup</h5>
-            <p>Ekspresi murni dari karakter Robusta. Body tebal dengan karakter dark chocolate, tobacco, cedar, dan earthy yang kuat, acidity rendah, serta finish panjang dan intens. Tanpa campuran Arabica, Titan menawarkan profil yang langsung, tegas, dan penuh tenaga.</p>
-          </div>
-          <div class="product-card-meta">
-            <div class="meta-item"><span>Body</span><strong>5/5</strong></div>
-            <div class="meta-item"><span>Acidity</span><strong>1/5</strong></div>
-            <div class="meta-item"><span>Blend</span><strong>100% Robusta</strong></div>
-          </div>
-          <div class="product-card-price">Rp 145.000 <span style="font-size:0.7rem;color:var(--tcr-gray);font-family:var(--font-body);">/ kg wholesale</span></div>
-          <div class="product-card-actions">
-            <a href="https://wa.me/6281234567890?text=Hi%20Threecore%2C%20I%20want%20to%20order%20TITAN" class="btn btn-primary" target="_blank">Order via WhatsApp</a>
-            <a href="#" class="btn btn-secondary">Buy on Marketplace</a>
-          </div>
+    </section>
+
+    <!-- Philosophy -->
+    <section id="philosophy" class="philosophy-section">
+
+      <div class="section-container">
+
+        <div class="section-label">
+          <span class="label-line"></span>
+          <span>OUR PHILOSOPHY</span>
         </div>
 
-        <!-- FORGE -->
-        <div class="product-card reveal reveal-delay-2">
-          <div class="product-card-number">02 / 06</div>
-          <h3 class="product-card-name">FORGE</h3>
-          <p class="product-card-tagline">The Kopi Susu Master</p>
-          <div class="product-card-flavor">
-            <span class="flavor-tag">Milk Chocolate</span>
-            <span class="flavor-tag">Hazelnut</span>
-            <span class="flavor-tag">Brown Sugar</span>
-            <span class="flavor-tag">Caramel</span>
-          </div>
-          <div class="product-card-reason">
-            <h5>For Business</h5>
-            <p>Mempertahankan body dan kekuatan Robusta, dengan tambahan kompleksitas dari 30% Arabica. Hasilnya adalah blend yang tetap kuat untuk espresso dan minuman susu, namun memiliki karakter yang lebih berlapis.</p>
-          </div>
-          <div class="product-card-reason">
-            <h5>For Your Cup</h5>
-            <p>30% Arabica mulai membuka lapisan rasa baru di atas fondasi Robusta. Karakter dark chocolate dan earthy tetap dominan, sementara hazelnut dan brown sugar memberikan dimensi tambahan pada cangkir. Dibandingkan Titan, Forge terasa lebih berlapis dan aromatik tanpa kehilangan body khas Robusta.</p>
-          </div>
-          <div class="product-card-meta">
-            <div class="meta-item"><span>Body</span><strong>4/5</strong></div>
-            <div class="meta-item"><span>Acidity</span><strong>2/5</strong></div>
-            <div class="meta-item"><span>Blend</span><strong>30/70 A/R</strong></div>
-          </div>
-          <div class="product-card-price">Rp 175.000 <span style="font-size:0.7rem;color:var(--tcr-gray);font-family:var(--font-body);">/ kg wholesale</span></div>
-          <div class="product-card-actions">
-            <a href="product-forge.html" class="btn btn-ghost">Explore FORGE</a>
-          </div>
+        <h2 class="section-title">
+          THREE FORCES.<br>
+          ONE CORE.
+        </h2>
+
+        <p class="section-description">
+          We believe exceptional coffee emerges from the balance of three fundamental forces:
+          Fire, Water, and Earth.
+        </p>
+
+        <div class="forces-grid">
+
+          <article class="force-card">
+            <div class="force-number">01</div>
+            <h3>FIRE</h3>
+            <p>
+              The transformative force of roasting. Heat unlocks the hidden character
+              within every bean.
+            </p>
+          </article>
+
+          <article class="force-card">
+            <div class="force-number">02</div>
+            <h3>WATER</h3>
+            <p>
+              The essential medium of extraction. Precision and purity reveal every
+              layer of flavor.
+            </p>
+          </article>
+
+          <article class="force-card">
+            <div class="force-number">03</div>
+            <h3>EARTH</h3>
+            <p>
+              The origin of everything. Soil, altitude, climate, and time shape the
+              character of every harvest.
+            </p>
+          </article>
+
         </div>
 
-        <!-- TORQUE -->
-        <div class="product-card reveal reveal-delay-3">
-          <div class="product-card-number">03 / 06</div>
-          <h3 class="product-card-name">TORQUE</h3>
-          <p class="product-card-tagline">The Versatile Balance</p>
-          <div class="product-card-flavor">
-            <span class="flavor-tag">Chocolate</span>
-            <span class="flavor-tag">Caramel</span>
-            <span class="flavor-tag">Roasted Almond</span>
-            <span class="flavor-tag">Subtle Citrus</span>
-          </div>
-          <div class="product-card-reason">
-            <h5>For Business</h5>
-            <p>Perpaduan seimbang untuk kedai yang membutuhkan karakter yang tetap kuat namun lebih kompleks. 50% Robusta mempertahankan body dan performa espresso, sementara 50% Arabica memperluas dimensi aroma dan rasa.</p>
-          </div>
-          <div class="product-card-reason">
-            <h5>For Your Cup</h5>
-            <p>Di komposisi 50/50, karakter Arabica mulai memainkan peran yang lebih besar dalam membentuk struktur rasa. Chocolate dan caramel tetap menjadi fondasi, sementara roasted almond dan subtle citrus menambah lapisan dan kontras. Hasilnya adalah cangkir yang lebih kompleks tanpa kehilangan body dan intensitas.</p>
-          </div>
-          <div class="product-card-meta">
-            <div class="meta-item"><span>Body</span><strong>3.5/5</strong></div>
-            <div class="meta-item"><span>Acidity</span><strong>3/5</strong></div>
-            <div class="meta-item"><span>Blend</span><strong>50/50 A/R</strong></div>
-          </div>
-          <div class="product-card-price">Rp 195.000 <span style="font-size:0.7rem;color:var(--tcr-gray);font-family:var(--font-body);">/ kg wholesale</span></div>
-          <div class="product-card-actions">
-            <a href="https://wa.me/6281234567890?text=Hi%20Threecore%2C%20I%20want%20to%20order%20TORQUE" class="btn btn-primary" target="_blank">Order via WhatsApp</a>
-            <a href="#" class="btn btn-secondary">Buy on Marketplace</a>
-          </div>
-        </div>
-
-        <!-- VECTOR -->
-        <div class="product-card reveal reveal-delay-1">
-          <div class="product-card-number">04 / 06</div>
-          <h3 class="product-card-name">VECTOR</h3>
-          <p class="product-card-tagline">The Upgrade Path</p>
-          <div class="product-card-flavor">
-            <span class="flavor-tag">Milk Chocolate</span>
-            <span class="flavor-tag">Honey</span>
-            <span class="flavor-tag">Red Apple</span>
-            <span class="flavor-tag">Subtle Floral</span>
-          </div>
-          <div class="product-card-reason">
-            <h5>For Business</h5>
-            <p>Untuk kedai yang ingin membawa pengalaman kopi ke tingkat yang lebih kompleks. Dominasi Arabica memberikan ruang lebih besar bagi karakter aroma dan acidity untuk berkembang, sementara 30% Robusta tetap menjaga body dan kekuatan espresso.</p>
-          </div>
-          <div class="product-card-reason">
-            <h5>For Your Cup</h5>
-            <p>Dengan 70% Arabica, struktur cangkir menjadi semakin berlapis. Milk chocolate menjadi fondasi, kemudian muncul honey, red apple, dan subtle floral sebagai lapisan aroma dan rasa yang lebih kompleks. 30% Robusta tetap memberikan body sehingga karakter Arabica tidak terasa terlalu tipis.</p>
-          </div>
-          <div class="product-card-meta">
-            <div class="meta-item"><span>Body</span><strong>3/5</strong></div>
-            <div class="meta-item"><span>Acidity</span><strong>4/5</strong></div>
-            <div class="meta-item"><span>Blend</span><strong>70/30 A/R</strong></div>
-          </div>
-          <div class="product-card-price">Rp 225.000 <span style="font-size:0.7rem;color:var(--tcr-gray);font-family:var(--font-body);">/ kg wholesale</span></div>
-          <div class="product-card-actions">
-            <a href="https://wa.me/6281234567890?text=Hi%20Threecore%2C%20I%20want%20to%20order%20VECTOR" class="btn btn-primary" target="_blank">Order via WhatsApp</a>
-            <a href="#" class="btn btn-secondary">Buy on Marketplace</a>
-          </div>
-        </div>
-
-        <!-- PRIME -->
-        <div class="product-card reveal reveal-delay-2">
-          <div class="product-card-number">05 / 06</div>
-          <h3 class="product-card-name">PRIME</h3>
-          <p class="product-card-tagline">The Pure Elegance</p>
-          <div class="product-card-flavor">
-            <span class="flavor-tag">Dark Chocolate</span>
-            <span class="flavor-tag">Orange Zest</span>
-            <span class="flavor-tag">Brown Sugar</span>
-            <span class="flavor-tag">Jasmine</span>
-          </div>
-          <div class="product-card-reason">
-            <h5>For Business</h5>
-            <p>Untuk kedai specialty dan coffee program yang ingin menampilkan karakter Arabica secara utuh. Tanpa Robusta sebagai penopang body, profil kopi dapat lebih fokus pada aroma, acidity, clarity, dan kompleksitas rasa.</p>
-          </div>
-          <div class="product-card-reason">
-            <h5>For Your Cup</h5>
-            <p>100% Arabica memberikan ruang penuh bagi setiap lapisan rasa untuk muncul. Dark chocolate, orange zest, brown sugar, dan jasmine membentuk profil yang lebih detail dan refined. Dibandingkan Vector, Prime memiliki body yang lebih ringan, namun menawarkan clarity dan kompleksitas aromatik yang lebih tinggi.</p>
-          </div>
-          <div class="product-card-meta">
-            <div class="meta-item"><span>Body</span><strong>3/5</strong></div>
-            <div class="meta-item"><span>Acidity</span><strong>5/5</strong></div>
-            <div class="meta-item"><span>Blend</span><strong>100% Arabica</strong></div>
-          </div>
-          <div class="product-card-price">Rp 255.000 <span style="font-size:0.7rem;color:var(--tcr-gray);font-family:var(--font-body);">/ kg wholesale</span></div>
-          <div class="product-card-actions">
-            <a href="https://wa.me/6281234567890?text=Hi%20Threecore%2C%20I%20want%20to%20order%20PRIME" class="btn btn-primary" target="_blank">Order via WhatsApp</a>
-            <a href="#" class="btn btn-secondary">Buy on Marketplace</a>
-          </div>
-        </div>
-
-        <!-- SPECTRUM -->
-        <div class="product-card reveal reveal-delay-3">
-          <div class="product-card-number">06 / 06</div>
-          <h3 class="product-card-name">SPECTRUM</h3>
-          <p class="product-card-tagline">The Signature Showcase</p>
-          <div class="product-card-flavor">
-            <span class="flavor-tag">Chocolate</span>
-            <span class="flavor-tag">Berries</span>
-            <span class="flavor-tag">Wine</span>
-            <span class="flavor-tag">Subtle Spice</span>
-          </div>
-          <div class="product-card-reason">
-            <h5>For Business</h5>
-            <p>Untuk kedai specialty dan coffee program yang ingin membawa pelanggan lebih jauh dalam eksplorasi kopi. Multi-origin memungkinkan setiap lot menampilkan karakter origin yang berbeda, sehingga pengalaman kopi dapat terus berkembang.</p>
-          </div>
-          <div class="product-card-reason">
-            <h5>For Your Cup</h5>
-            <p>Bukan tentang satu profil rasa, tetapi tentang banyak lapisan karakter yang berasal dari origin yang berbeda. Chocolate, berries, wine-like acidity, dan subtle spice membentuk pengalaman yang kompleks dan terus berkembang. Setiap origin membawa cerita dan karakter tersendiri ke dalam cangkir.</p>
-          </div>
-          <div class="product-card-meta">
-            <div class="meta-item"><span>Body</span><strong>3.5/5</strong></div>
-            <div class="meta-item"><span>Acidity</span><strong>4/5</strong></div>
-            <div class="meta-item"><span>Blend</span><strong>Multi-Origin</strong></div>
-          </div>
-          <div class="product-card-price">Rp 275.000 <span style="font-size:0.7rem;color:var(--tcr-gray);font-family:var(--font-body);">/ kg wholesale</span></div>
-          <div class="product-card-actions">
-            <a href="https://wa.me/6281234567890?text=Hi%20Threecore%2C%20I%20want%20to%20order%20SPECTRUM" class="btn btn-primary" target="_blank">Order via WhatsApp</a>
-            <a href="#" class="btn btn-secondary">Buy on Marketplace</a>
-          </div>
-        </div>
       </div>
-    </div>
-  </section>
 
-  <!-- Coffee Finder -->
-  <section class="finder-section" id="finder">
-    <div class="container">
-      <div class="section-header center reveal">
-        <span class="label">Coffee Finder</span>
-        <h2>NOT SURE WHERE TO START?</h2>
-        <p>Pilih apa yang Anda cari. Kami akan menunjukkan kopi yang tepat untuk Anda.</p>
-      </div>
-      <div class="finder-grid reveal">
-        <div class="finder-option" data-preference="bold">
-          <h4>BOLD</h4>
-          <p>Heavy body, strong presence, straightforward character.</p>
-        </div>
-        <div class="finder-option" data-preference="balanced">
-          <h4>BALANCED</h4>
-          <p>Equal parts body and brightness. Reliable and versatile.</p>
-        </div>
-        <div class="finder-option" data-preference="sweet">
-          <h4>SWEET</h4>
-          <p>Natural sweetness, chocolate and nut tones. Easy to love.</p>
-        </div>
-        <div class="finder-option" data-preference="refined">
-          <h4>REFINED</h4>
-          <p>Complex, elegant, for those who appreciate subtlety.</p>
-        </div>
-        <div class="finder-option" data-preference="expressive">
-          <h4>EXPRESSIVE</h4>
-          <p>Fruity, vibrant, wine-like. For adventurous palates.</p>
-        </div>
-        <div class="finder-option" data-preference="everyday">
-          <h4>EVERYDAY</h4>
-          <p>Approachable quality that makes sense for daily brewing.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Single Origin -->
-  <section class="origin-section" id="origin">
-    <div class="container">
-      <div class="section-header center reveal">
-        <span class="label">Single Origin</span>
-        <h2>DISCOVERED, NOT JUST SOURCED.</h2>
-        <p>Rotasi origin dari Indonesia dan berbagai belahan dunia. Masing-masing punya cerita, masing-masing punya perjalanan rasa yang unik.</p>
-      </div>
-      <div class="origin-grid">
-        <div class="origin-card origin-card-flagship reveal">
-          <span class="origin-badge">Flagship</span>
-          <h3 class="origin-name">CRIMSON LOTUS</h3>
-          <p class="origin-meta">West Java · 1.700 masl · Submerged Mossto Washed · Pichia Yeast Fermentation</p>
-          <div class="origin-notes">
-            <span class="flavor-tag">Red Plum</span>
-            <span class="flavor-tag">Peach Blossom</span>
-            <span class="flavor-tag">Maple Syrup</span>
-            <span class="flavor-tag">Ripe Mango</span>
+    <!-- For Business -->
+    <section id="for-business" class="business-section">
+
+      <div class="section-container">
+
+        <div class="section-label">
+          <span class="label-line"></span>
+          <span>FOR BUSINESS</span>
+        </div>
+
+        <div class="business-content">
+
+          <div class="business-copy">
+            <h2 class="section-title">
+              COFFEE THAT<br>
+              WORKS FOR YOU.
+            </h2>
+
+            <p class="section-description">
+              From specialty cafés to hospitality and corporate environments,
+              Threecore delivers a coffee experience built around consistency,
+              quality, and character.
+            </p>
+
+            <a href="#contact" class="business-cta">
+              <span>Work With Us</span>
+              <span class="cta-arrow">→</span>
+            </a>
           </div>
-          <div class="origin-price">Rp 250.000 <span style="font-size:0.8rem;color:var(--tcr-gray);font-family:var(--font-body);">/ 200g</span></div>
-        </div>
-        <div class="origin-card reveal reveal-delay-1">
-          <span class="origin-badge">Flagship</span>
-          <h3 class="origin-name">GREEN MIST</h3>
-          <p class="origin-meta">Mt. Tilu, West Java · Washed Process</p>
-          <div class="origin-notes">
-            <span class="flavor-tag">Melon</span>
-            <span class="flavor-tag">Pomelo</span>
-            <span class="flavor-tag">Apple</span>
-          </div>
-          <div class="origin-price">Rp 250.000 <span style="font-size:0.8rem;color:var(--tcr-gray);font-family:var(--font-body);">/ 200g</span></div>
-        </div>
-      </div>
-      <div style="text-align:center; margin-top: var(--space-lg);">
-        <a href="coffee.html#single-origin" class="btn btn-secondary">Explore All Origins</a>
-      </div>
-    </div>
-  </section>
 
-  <!-- Business Philosophy -->
-  <section class="business-hero" id="business">
-    <div class="container">
-      <div class="grid-2" style="align-items:center;">
-        <div class="reveal">
-          <span class="label">For Business</span>
-          <h2 style="font-size: clamp(2.5rem, 6vw, 5rem); margin-bottom: var(--space-md);">COFFEE THAT WORKS FOR YOUR BUSINESS.</h2>
-          <p style="color: var(--tcr-gray-light); font-size: 1.1rem; margin-bottom: var(--space-lg); max-width: 500px;">
-            Kami tidak memulai dari "Kopi apa yang ingin kami jual?" Kami memulai dari "Apa yang harus dicapai kopi ini untuk bisnis Anda?"
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact-section">
+
+      <div class="section-container">
+
+        <div class="section-label">
+          <span class="label-line"></span>
+          <span>CONTACT</span>
+        </div>
+
+        <h2 class="section-title">
+          LET'S CREATE<br>
+          SOMETHING DISTINCT.
+        </h2>
+
+        <div class="contact-content">
+
+          <p>
+            Interested in working with Threecore?
           </p>
-          <a href="business.html" class="btn btn-primary">Bangun Coffee Program Anda</a>
-        </div>
-        <div class="reveal reveal-delay-2" style="display:grid; gap: var(--space-md);">
-          <div style="padding: var(--space-md); background: var(--tcr-black); border: 1px solid var(--tcr-charcoal); border-left: 3px solid var(--tcr-copper);">
-            <h4 style="font-size: 1.1rem; margin-bottom: 0.5rem;">Customer</h4>
-            <p style="color: var(--tcr-gray-light); font-size: 0.9rem;">Siapa yang Anda layani?</p>
-          </div>
-          <div style="padding: var(--space-md); background: var(--tcr-black); border: 1px solid var(--tcr-charcoal); border-left: 3px solid var(--tcr-copper);">
-            <h4 style="font-size: 1.1rem; margin-bottom: 0.5rem;">Menu</h4>
-            <p style="color: var(--tcr-gray-light); font-size: 0.9rem;">Di mana posisi kopi dalam menu?</p>
-          </div>
-          <div style="padding: var(--space-md); background: var(--tcr-black); border: 1px solid var(--tcr-charcoal); border-left: 3px solid var(--tcr-copper);">
-            <h4 style="font-size: 1.1rem; margin-bottom: 0.5rem;">Margin</h4>
-            <p style="color: var(--tcr-gray-light); font-size: 0.9rem;">Apakah masuk akal secara bisnis?</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- Custom Blend -->
-  <section class="customblend-section" id="custom-blend">
-    <div class="container">
-      <div class="section-header center reveal">
-        <span class="label">Custom Blend</span>
-        <h2>YOUR BUSINESS ISN'T GENERIC.<br>WHY SHOULD YOUR COFFEE BE?</h2>
-        <p>Signature blend yang dikembangkan khusus untuk brand, menu, dan pelanggan Anda.</p>
-      </div>
-      <div class="process-timeline reveal">
-        <div class="process-step">
-          <div class="process-step-dot"></div>
-          <h5>Discover</h5>
-          <p>Kami mempelajari bisnis, menu, dan tujuan Anda.</p>
-        </div>
-        <div class="process-step">
-          <div class="process-step-dot"></div>
-          <h5>Develop</h5>
-          <p>Kami merancang blend sesuai kebutuhan Anda.</p>
-        </div>
-        <div class="process-step">
-          <div class="process-step-dot"></div>
-          <h5>Test</h5>
-          <p>Anda cupping, kami iterasi. Sampai benar-benar pas.</p>
-        </div>
-        <div class="process-step">
-          <div class="process-step-dot"></div>
-          <h5>Produce</h5>
-          <p>Supply konsisten, batch demi batch.</p>
-        </div>
-      </div>
-      <div style="text-align:center; margin-top: var(--space-xl);">
-        <a href="business.html#custom-blend" class="btn btn-primary">Bangun Blend Anda</a>
-      </div>
-    </div>
-  </section>
+          <a href="mailto:hello@threecore.com" class="contact-email">
+            hello@threecore.com
+          </a>
 
-  <!-- Why THREECORE -->
-  <section class="why-section" id="why">
-    <div class="container">
-      <div class="section-header center reveal">
-        <span class="label">Why Threecore</span>
-        <h2>NOT JUST A SUPPLIER.<br>A PARTNER.</h2>
-      </div>
-      <div class="why-grid">
-        <div class="why-item reveal">
-          <h4>Product Line Depth</h4>
-          <p>Enam blend espresso yang berbeda, ditambah rolling single origin dan layanan custom blend. Tidak ada roastery lain di Indonesia yang menawarkan keluasan ini dengan tingkat kesungguhan yang sama.</p>
         </div>
-        <div class="why-item reveal reveal-delay-1">
-          <h4>Bold Brand Identity</h4>
-          <p>Positioning industrial-premium yang menonjol di antara kompetitor yang corporate-boring atau artisan-generic. Supplier kopi Anda seharusnya mencerminkan standar Anda.</p>
-        </div>
-        <div class="why-item reveal reveal-delay-2">
-          <h4>Business-First Approach</h4>
-          <p>Kami memahami margin, konsistensi, workflow, dan kesesuaian menu. Pendekatan konsultatif kami berarti kami menjual solusi, bukan sekadar biji kopi.</p>
-        </div>
-        <div class="why-item reveal reveal-delay-3">
-          <h4>Dual-Segment Mastery</h4>
-          <p>Tiga tahun melayani 20+ klien B2B sambil membangun komunitas home brewer. Kami memahami kedua sisi cangkir.</p>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- Journal Preview -->
-  <section class="journal-section" id="journal">
-    <div class="container">
-      <div class="section-header center reveal">
-        <span class="label">Journal</span>
-        <h2>KNOWLEDGE, SHARED.</h2>
-        <p>Education, origin stories, and business insights from the THREECORE team.</p>
       </div>
-      <div class="journal-grid">
-        <article class="journal-card reveal">
-          <div class="journal-card-image"></div>
-          <div class="journal-card-content">
-            <span class="journal-card-category">Business</span>
-            <h4>Why Consistency Beats Perfection in Coffee Shops</h4>
-            <p>How batch-to-batch reliability builds customer trust and repeat business.</p>
-          </div>
-        </article>
-        <article class="journal-card reveal reveal-delay-1">
-          <div class="journal-card-image"></div>
-          <div class="journal-card-content">
-            <span class="journal-card-category">Origin</span>
-            <h4>Inside Pichia Yeast Fermentation at 1.700 MASL</h4>
-            <p>The science and craft behind CRIMSON LOTUS's unique flavor profile.</p>
-          </div>
-        </article>
-        <article class="journal-card reveal reveal-delay-2">
-          <div class="journal-card-image"></div>
-          <div class="journal-card-content">
-            <span class="journal-card-category">Brewing</span>
-            <h4>Choosing the Right Blend for Kopi Susu</h4>
-            <p>Why FORGE's 30/70 Arabica-Robusta ratio cuts through milk better than pure Arabica.</p>
-          </div>
-        </article>
-      </div>
-      <div style="text-align:center; margin-top: var(--space-lg);">
-        <a href="journal.html" class="btn btn-ghost">Read All Articles</a>
-      </div>
-    </div>
-  </section>
 
-  <!-- Final CTA / Contact -->
-  <section class="contact-section" id="contact">
-    <div class="container">
-      <div class="section-header center reveal">
-        <span class="label">Contact</span>
-        <h2>LET'S TALK COFFEE.</h2>
-        <p>Three paths. One conversation.</p>
-      </div>
-      <div class="contact-grid reveal">
-        <div class="contact-path">
-          <div class="contact-path-icon">☕</div>
-          <h4>I Want to Buy Coffee</h4>
-          <p>Direct order via WhatsApp or browse our marketplace listings.</p>
-          <a href="https://wa.me/6281234567890?text=Hi%20Threecore%2C%20I%20want%20to%20buy%20coffee" class="btn btn-primary" target="_blank">Order via WhatsApp</a>
-        </div>
-        <div class="contact-path">
-          <div class="contact-path-icon">🏢</div>
-          <h4>I Run a Business</h4>
-          <p>Let's discuss your coffee program, custom blend, or wholesale needs.</p>
-          <a href="business.html" class="btn btn-primary">Start a Business Conversation</a>
-        </div>
-        <div class="contact-path">
-          <div class="contact-path-icon">❓</div>
-          <h4>I Need Help Choosing</h4>
-          <p>Not sure which coffee is right? We'll guide you personally.</p>
-          <a href="https://wa.me/6281234567890?text=Hi%20Threecore%2C%20I%20need%20help%20choosing%20coffee" class="btn btn-secondary" target="_blank">Ask via WhatsApp</a>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
+
+  </main>
 
   <!-- Footer -->
   <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div>
-          <div class="footer-brand">THREE<span>CORE</span></div>
-          <p class="footer-desc">B2B+B2C coffee roastery based in Sidoarjo, Jawa Timur. Built around people, purpose, and business.</p>
-        </div>
-        <div class="footer-col">
-          <h5>Explore</h5>
-          <ul>
-            <li><a href="coffee.html">Coffee</a></li>
-            <li><a href="business.html">For Business</a></li>
-            <li><a href="story.html">Our Story</a></li>
-            <li><a href="journal.html">Journal</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h5>Products</h5>
-          <ul>
-            <li><a href="coffee.html#espresso">Espresso Series</a></li>
-            <li><a href="coffee.html#single-origin">Single Origin</a></li>
-            <li><a href="business.html#custom-blend">Custom Blend</a></li>
-            <li><a href="coffee.html#gift">Gift Sets</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h5>Connect</h5>
-          <ul>
-            <li><a href="https://instagram.com/threecoreroaster" target="_blank">Instagram</a></li>
-            <li><a href="https://wa.me/6281234567890" target="_blank">WhatsApp</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </div>
+
+    <div class="footer-container">
+
+      <div class="footer-brand">
+        <span class="logo-mark">T</span>
+        <span class="logo-text">THREECORE</span>
       </div>
-      <div class="footer-bottom">
-        <p>© 2026 Threecore Crafted Roaster. All rights reserved.</p>
-        <p>Sidoarjo, Jawa Timur, Indonesia.</p>
-      </div>
+
+      <p class="footer-copy">
+        © 2026 Threecore. Coffee crafted by three forces.
+      </p>
+
     </div>
+
   </footer>
 
+  <!-- Main Script -->
   <script src="js/main.js"></script>
+
 </body>
 </html>
