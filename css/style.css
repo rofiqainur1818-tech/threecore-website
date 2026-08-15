@@ -528,7 +528,7 @@ h4 { font-size: clamp(1.2rem, 2vw, 1.8rem); }
 .ambient-bg__wheel-wrap {
     position: absolute;
 
-    width: min(72vw, 900px);
+    width: min(52vw, 760px);
     aspect-ratio: 1;
 
     right: 18%;
