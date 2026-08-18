@@ -495,30 +495,46 @@ h4 { font-size: clamp(1.2rem, 2vw, 1.8rem); }
   text-transform: uppercase;
   color: var(--tcr-white);
   border-radius: 2px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
 
-/* READY — hijau */
-.stock-ready {
-  background: rgba(46, 125, 50, 0.9);
-  border: 1px solid rgba(76, 175, 80, 0.6);
+/* READY — Hijau */
+.stock-badge.stock-ready {
+  background: #2e7d32;
+  border: 1px solid #4caf50;
 }
 
-/* SOLD OUT — merah + efek image dimmed */
-.stock-sold {
-  background: rgba(180, 40, 40, 0.9);
-  border: 1px solid rgba(220, 60, 60, 0.6);
+/* SOLD OUT — Merah */
+.stock-badge.stock-sold {
+  background: #b42828;
+  border: 1px solid #dc3c3c;
 }
 
-/* Kalau SOLD OUT → gambar dibuat lebih redup */
-.product-card-poster-img:has(.stock-sold) img {
-  filter: grayscale(60%) brightness(0.7);
+/* ===== EFEK SOLD OUT PADA CARD ===== */
+
+/* Gambar dibuat grayscale + redup */
+.product-card-poster.is-sold-out .product-card-poster-img img {
+  filter: grayscale(70%) brightness(0.6);
 }
 
-/* Kalau SOLD OUT → hover zoom dimatikan */
-.product-card-poster:has(.stock-sold):hover .product-card-poster-img img {
+/* Matikan zoom saat hover */
+.product-card-poster.is-sold-out:hover .product-card-poster-img img {
+  transform: none;
+}
+
+/* Ubah tombol CTA jadi abu-abu */
+.product-card-poster.is-sold-out .product-card-poster-cta {
+  background: var(--tcr-charcoal);
+  color: var(--tcr-gray);
+}
+
+/* Matikan hover effect di tombol */
+.product-card-poster.is-sold-out:hover .product-card-poster-cta {
+  background: var(--tcr-charcoal);
+}
+
+/* Matikan animasi arrow */
+.product-card-poster.is-sold-out:hover .product-card-poster-cta .arrow {
   transform: none;
 }
 
