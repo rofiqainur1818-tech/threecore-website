@@ -392,8 +392,8 @@ h4 { font-size: clamp(1.2rem, 2vw, 1.8rem); }
   flex-direction: column;
   background: var(--tcr-black-soft);
   border: 1px solid var(--tcr-charcoal);
-  padding: 0;                 /* ← DIUBAH dari var(--space-md) jadi 0 */
-  gap: 0;                     /* ← DIUBAH dari var(--space-md) jadi 0 */
+  padding: var(--space-md);
+  gap: var(--space-md);
   overflow: hidden;
   text-decoration: none;
   color: inherit;
@@ -408,22 +408,28 @@ h4 { font-size: clamp(1.2rem, 2vw, 1.8rem); }
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
 }
 
-/* Container Image — DEFAULT SEKARANG SQUARE 1:1 */
+/* Container Image — DEFAULT (2:3 portrait, untuk Espresso & Index) */
 .product-card-poster-img {
   position: relative;
   width: 100%;
-  aspect-ratio: 1 / 1;        /* ← DIUBAH dari 2/3 jadi 1/1 (SQUARE) */
+  aspect-ratio: 2 / 3;
   overflow: hidden;
   background: var(--tcr-black);
 }
 
+/* MODIFIER — SQUARE 1:1 (khusus Single Origin) */
+.product-card-poster-img.is-square {
+  aspect-ratio: 1 / 1;
+}
+
 /* Fallback untuk browser lama yang tidak support aspect-ratio */
 @supports not (aspect-ratio: 1 / 1) {
-  .product-card-poster-img {
+  .product-card-poster-img.is-square {
+    aspect-ratio: auto;
     height: 0;
     padding-top: 100%;
   }
-  .product-card-poster-img img {
+  .product-card-poster-img.is-square img {
     position: absolute;
     top: 0;
     left: 0;
